@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Spartan:400,500,600,700,800,900&display=swap');
+
+$primary-color: #2b2a8b;
+$secondary-color: #ffb640;
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Spartan', sans-serif;
+    user-select: none;
+    background-image: url('../img/Flat-Mountains.svg');
+    background-size: cover;
+}
+
+p, h1{
+    padding: 0;
+    margin: 0;
+}
+
+@mixin set-flex($align:flex-start, $justify:flex-start, $dir:row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $dir;
+}
+
+@mixin set-transition($prop, $time-funct:ease) {
+    transition: $prop .3s $time-funct;
+}
+
+@function set-text-color($color){
+    @if (lightness($color) > 70) {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+
+%a{
+    text-decoration: none;
+    outline: none;
+}
+
+%btn{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: set-text-color($secondary-color);
+    padding: 0 1rem;
+    width: auto;
+    height: 2rem;
+    background-color: $secondary-color;
+    border: 2px solid $secondary-color;
+    @include set-flex(center, center);
+    text-transform: capitalize;
+    font-family: 'Comfortaa', cursive;
+    border-radius: 20px;
+    @include set-transition(background-color, ease);
+
+    &:hover{
+        background-color: white;
+        color: $secondary-color;
+    }
+}
+
+.btn{
+    @extend %btn;
+}
+
+.container{
+    margin: 0 5rem;
+}
+
+.nav{
+    @include set-flex(center, space-between);
+    height: 10vh;
+    a{
+        @extend %a;
+    }
+    &--active{
+        border-bottom: 2px solid $secondary-color;
+    }
+    &__link{
+        @include set-flex(center, space-between);
+        width: 20rem;
+        a{
+            text-transform: capitalize;
+            color: set-text-color(white);
+            @include set-transition(color, ease);
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+    }
+    &__logo{
+        display: block;
+        cursor: pointer;
+        font-family: 'Pacifico', cursive;
+        a{
+            color: $primary-color;
+            font-size: 1.5rem;
+        }
+    }
+    .btn{
+        color: set-text-color($secondary-color);
+    }
+}
+
+main.content{
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 40% 60%;
+    place-content: center;
+    .img-home{
+        width: 100%;
+    }
+    .home-content{
+        @include set-flex($justify:center,$dir:column);
+        color: set-text-color(white);
+        &__head{
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            line-height: 3rem;
+            font-weight: bold;
+        }
+        &__body{
+            font-size: .9rem;
+            margin: 1.5rem 0;
+        }
+    }
+}

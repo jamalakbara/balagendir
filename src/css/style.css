@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Spartan:400,500,600,700,800,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Spartan', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: url("../img/Flat-Mountains.svg");
+  background-size: cover;
+}
+
+p, h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  outline: none;
+}
+
+.btn {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  padding: 0 1rem;
+  width: auto;
+  height: 2rem;
+  background-color: #ffb640;
+  border: 2px solid #ffb640;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-transform: capitalize;
+  font-family: 'Comfortaa', cursive;
+  border-radius: 20px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #ffb640;
+}
+
+.container {
+  margin: 0 5rem;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 10vh;
+}
+
+.nav--active {
+  border-bottom: 2px solid #ffb640;
+}
+
+.nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 20rem;
+}
+
+.nav__link a {
+  text-transform: capitalize;
+  color: #333;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.nav__link a:hover {
+  color: #ffb640;
+}
+
+.nav__logo {
+  display: block;
+  cursor: pointer;
+  font-family: 'Pacifico', cursive;
+}
+
+.nav__logo a {
+  color: #2b2a8b;
+  font-size: 1.5rem;
+}
+
+.nav .btn {
+  color: #fff;
+}
+
+main.content {
+  display: -ms-grid;
+  display: grid;
+  height: 90vh;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  place-content: center;
+}
+
+main.content .img-home {
+  width: 100%;
+}
+
+main.content .home-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #333;
+}
+
+main.content .home-content__head {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+main.content .home-content__body {
+  font-size: .9rem;
+  margin: 1.5rem 0;
+}
+/*# sourceMappingURL=style.css.map */
