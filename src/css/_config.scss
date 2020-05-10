@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Spartan:400,500,600,700,800,900&display=swap");
+
+$primary-color: #2b2a8b;
+$secondary-color: #ffb640;
+$fb: #4267b2;
+$twitter: #1da1f2;
+$ig: #e52055;
+$linkedin: #0077b5;
+$github: black;
+
+@mixin set-flex($align: flex-start, $justify: flex-start, $dir: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $dir;
+}
+
+@mixin set-transition($prop, $time-funct: ease) {
+  transition: $prop 0.3s $time-funct;
+}
+
+@mixin set-border-radius() {
+  border-radius: 3px;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}

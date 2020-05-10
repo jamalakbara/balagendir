@@ -1,0 +1,8 @@
+input {
+  outline: none;
+  font-family: "Spartan", sans-serif;
+  &::placeholder {
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,58 @@
+.login {
+  @extend %main;
+  &__box {
+    @include set-flex(center, flex-start, column);
+    padding: 2rem;
+    background-color: rgba($color: darken($secondary-color, 10%), $alpha: 0.3);
+    width: 25rem;
+    height: 25rem;
+    border-radius: 3px;
+    box-shadow: 0 2.4px 2.5px rgba(0, 0, 0, 0.01),
+      0 6.5px 8.3px rgba(0, 0, 0, 0.011), 0 22px 37px rgba(0, 0, 0, 0.07);
+    .form {
+      @include set-flex(center, space-evenly, column);
+      height: 100%;
+      width: 100%;
+      .btn {
+        width: 75%;
+        &:hover {
+          background-color: darken($secondary-color, 10%);
+          border: 2px solid darken($secondary-color, 10%);
+          color: white;
+        }
+      }
+      &__user {
+        width: 75%;
+        @include set-flex(center, center);
+        i {
+          height: 1.5rem;
+          border-bottom: 2px solid #333;
+          padding: 0 0.25rem;
+          img {
+            height: 75%;
+          }
+        }
+        input {
+          width: 100%;
+          height: 1.5rem;
+          border: none;
+          background-color: rgba($color: #000000, $alpha: 0);
+          border-bottom: 2px solid #333;
+          padding: 0 0.5rem;
+          color: set-text-color(white);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &__logo {
+    @include set-flex(center, center);
+    width: 15rem;
+    height: 15rem;
+    // background-color: black;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

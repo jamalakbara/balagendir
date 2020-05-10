@@ -1,0 +1,27 @@
+%main {
+  display: grid;
+  height: 90vh;
+  place-content: center;
+}
+
+main.content {
+  @extend %main;
+  grid-template-columns: 40% 60%;
+  .img-home {
+    width: 100%;
+  }
+  .home-content {
+    @include set-flex($justify: center, $dir: column);
+    color: set-text-color(white);
+    &__head {
+      text-transform: capitalize;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      font-weight: bold;
+    }
+    &__body {
+      font-size: 0.9rem;
+      margin: 1.5rem 0;
+    }
+  }
+}

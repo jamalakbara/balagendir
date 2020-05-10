@@ -1,0 +1,49 @@
+.nav {
+  @include set-flex(center, space-between);
+  height: 10vh;
+  a {
+    @extend %a;
+  }
+  &--active {
+    border-bottom: 2px solid $secondary-color;
+  }
+  &__link {
+    @include set-flex(center, space-around);
+    width: 15rem;
+    a {
+      text-transform: capitalize;
+      color: set-text-color(white);
+      @include set-transition(color, ease);
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    .user {
+      svg {
+        width: 0.8rem;
+        margin-right: 0.2rem;
+        @include set-transition(fill, ease);
+        #user {
+          fill: white;
+        }
+      }
+      &:hover {
+        #user {
+          fill: $secondary-color !important;
+        }
+      }
+    }
+  }
+  &__logo {
+    display: block;
+    cursor: pointer;
+    font-family: "Pacifico", cursive;
+    a {
+      color: $primary-color;
+      font-size: 1.5rem;
+    }
+  }
+  .btn {
+    color: set-text-color($secondary-color);
+  }
+}

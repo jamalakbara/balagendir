@@ -1,0 +1,8 @@
+%a {
+  text-decoration: none;
+  outline: none;
+}
+
+a {
+  @extend %a;
+}
