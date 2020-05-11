@@ -1,58 +1,10 @@
 import React, { Component } from "react";
-import Social from "./Social";
 import Helmet from "react-helmet";
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      social: [
-        {
-          id: 1,
-          name: "akbar",
-          soc: "facebook",
-          socLink: "http://www.facebook.com/jamalakbara",
-        },
-        {
-          id: 2,
-          name: "jamal akbar alam",
-          soc: "twitter",
-          socLink: "http://www.twitter.com/jamalakbara",
-        },
-        {
-          id: 3,
-          name: "jamal akbar alam",
-          soc: "instagram",
-          socLink: "http://www.instagram.com/jamalakbara",
-        },
-        {
-          id: 4,
-          name: "jamal akbar alam",
-          soc: "linkedin",
-          socLink: "https://www.linkedin.com/in/jamal-akbar-alam-0940a3198/",
-        },
-        {
-          id: 5,
-          name: "jamal akbar alam",
-          soc: "github",
-          socLink: "http://www.github.com/jamalakbara",
-        },
-      ],
-    };
-  }
-
   render() {
-    const { social } = this.state;
     const { title } = this.props;
-    const socmed = social.map((item) => (
-      <Social
-        key={item.id}
-        soc={item.soc}
-        name={item.name}
-        link={item.socLink}
-      />
-    ));
+
     return (
       <div className="container">
         <Helmet>
@@ -78,10 +30,41 @@ class About extends Component {
               </p>
             </div>
           </main>
-          <div className="mine">
-            <h1 className="mine__head">this is mine</h1>
-            <div className="mine__container">{socmed}</div>
-          </div>
+          <section className="experiences">
+            <header className="experiences__header">
+              <h1>experience</h1>
+            </header>
+            <main className="experiences__main">
+              <article
+                className="riwayat"
+                rentang-waktu="31 Jul 19 - 04 Sep 19"
+              >
+                <div className="riwayat__group">
+                  <h1>Freelance At PT Telkom Indonesia</h1>
+                  <p>
+                    Exercitation sint dolore reprehenderit eu veniam cupidatat.
+                    Aliquip ipsum aliquip commodo
+                  </p>
+                </div>
+              </article>
+              <article
+                className="riwayat"
+                rentang-waktu="20 Mei 19 - 20 Jun 19"
+              >
+                <div className="riwayat__group">
+                  <h1>Internship At PT Telkom Indonesia</h1>
+                  <p>
+                    Exercitation sint dolore reprehenderit eu veniam cupidatat.
+                    Aliquip ipsum aliquip commodo consequat velit est magna qui
+                    aute exercitation incididunt excepteur consectetur veniam.
+                    Nisi mollit esse quis voluptate id dolor aute sit. Quis
+                    laborum in minim anim esse amet amet quis excepteur Lorem
+                    ipsum cupidatat.
+                  </p>
+                </div>
+              </article>
+            </main>
+          </section>
         </div>
       </div>
     );

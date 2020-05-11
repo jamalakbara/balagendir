@@ -5,10 +5,11 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Login from "./components/Login";
+import Contact from "./components/Contact";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  const [loggedIn, setloggedIn] = useState(false);
+  const [loggedIn, setloggedIn] = useState(true);
   return (
     <Router>
       <div className="App">
@@ -21,6 +22,12 @@ function App() {
           />
           <Route path="/about" exact render={() => <About title="About" />} />}
           />
+          <Route
+            path="/contact"
+            exact
+            render={() => <Contact title="Contact" />}
+          />
+          } />
           <Route path="/login" exact render={() => <Login title="Login" />} />}
           />
         </Switch>

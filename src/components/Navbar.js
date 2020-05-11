@@ -9,24 +9,28 @@ class Navbar extends Component {
       navLink: [
         {
           id: 1,
-          link: "home"
+          link: "home",
         },
         {
           id: 2,
-          link: "about"
+          link: "about",
         },
         {
           id: 3,
-          link: "login"
-        }
-      ]
+          link: "contact",
+        },
+        {
+          id: 4,
+          link: "login",
+        },
+      ],
     };
   }
 
   render() {
     const { navLink } = this.state;
     const { loggedIn } = this.props;
-    const links = navLink.map(item => {
+    const links = navLink.map((item) => {
       if (item.link === "login") {
         if (!loggedIn) {
           return (
