@@ -69,7 +69,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 20rem;
+  width: 15rem;
 }
 
 .nav__link a {
@@ -150,6 +150,330 @@
   place-content: center;
   z-index: -1;
   opacity: 0.5;
+}
+
+.experiences__header,
+.services__header {
+  text-transform: capitalize;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.experiences,
+.services {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.experiences::before {
+  content: url("../img/berjas.svg");
+  position: absolute;
+  height: 10%;
+  width: 10%;
+  right: 0;
+  bottom: 20rem;
+  z-index: -1;
+}
+
+.experiences__main {
+  display: -ms-grid;
+  display: grid;
+  padding: 1rem 8rem;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  border-left: 3px solid #2b2a8b;
+}
+
+.experiences__main .riwayat__group {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 0.5rem;
+}
+
+.experiences__main .riwayat__group h1 {
+  color: #ffb640;
+}
+
+.experiences__main .riwayat__group p {
+  font-size: 0.9rem;
+}
+
+.experiences__main .riwayat__group p::before {
+  position: absolute;
+  left: calc(0rem + 5px);
+  content: attr(rentang-waktu);
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+
+.experiences__main .riwayat__group::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc(0rem - 3.5px);
+  margin-top: 1rem;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: #7978d6;
+}
+
+.services__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.services .offers {
+  min-height: 20rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 1rem;
+  background-color: #f8fcfe;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.services .offers h1 {
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.services .offers p {
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+  color: #333;
+}
+
+.services .offers__img {
+  height: 4rem;
+  width: 5rem;
+}
+
+.services .offers:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0.5px 1.9px rgba(0, 0, 0, 0.056), 0 1.3px 5.4px rgba(0, 0, 0, 0.08), 0 3px 13px rgba(0, 0, 0, 0.104), 0 10px 43px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0.5px 1.9px rgba(0, 0, 0, 0.056), 0 1.3px 5.4px rgba(0, 0, 0, 0.08), 0 3px 13px rgba(0, 0, 0, 0.104), 0 10px 43px rgba(0, 0, 0, 0.16);
+}
+
+.mine {
+  position: relative;
+  height: calc(100vh - 10vh);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mine::after {
+  position: absolute;
+  bottom: 8rem;
+  right: -5rem;
+  content: url("/img/daun.svg");
+  height: 15%;
+  width: 15%;
+  display: block;
+  z-index: -1;
+}
+
+.mine::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: absolute;
+  top: 7rem;
+  left: -5rem;
+  content: url("/img/daun3.svg");
+  height: 20%;
+  width: 20%;
+  display: block;
+  z-index: -1;
+}
+
+.mine__head {
+  color: #333;
+  text-transform: capitalize;
+}
+
+.mine__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mine__social {
+  cursor: pointer;
+  background-color: red;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+  margin: 1em;
+  height: 15rem;
+  -webkit-box-shadow: 0 2.4px 2.5px rgba(0, 0, 0, 0.01), 0 6.5px 8.3px rgba(0, 0, 0, 0.011), 0 22px 37px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 2.4px 2.5px rgba(0, 0, 0, 0.01), 0 6.5px 8.3px rgba(0, 0, 0, 0.011), 0 22px 37px rgba(0, 0, 0, 0.07);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.mine__social:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.mine__logo {
+  width: 3em;
+  height: 3em;
+}
+
+.mine__soc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #333;
+}
+
+.mine__soc p {
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+
+.mine__hilite {
+  margin: 0 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.mine__hilite img {
+  width: 100%;
+  height: 100%;
+}
+
+.mine .facebook {
+  background-color: rgba(98, 131, 197, 0.3);
+}
+
+.mine .twitter {
+  background-color: rgba(77, 181, 245, 0.3);
+}
+
+.mine .instagram {
+  background-color: rgba(234, 78, 120, 0.3);
+}
+
+.mine .linkedin {
+  background-color: rgba(0, 153, 232, 0.3);
+}
+
+.mine .github {
+  background-color: rgba(26, 26, 26, 0.3);
+}
+
+.contact-socmed {
+  position: relative;
+}
+
+.contact-socmed::before {
+  position: absolute;
+  content: attr(judul);
+  display: inline;
+  font-size: 25rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: -75px;
+  color: #f2f2f2;
+  z-index: -1;
+  top: 5rem;
 }
 
 main.content, .login {
@@ -359,266 +683,5 @@ h1 {
 
 .container {
   margin: 0 5rem;
-}
-
-.experiences {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 5rem;
-}
-
-.experiences__header {
-  text-transform: capitalize;
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.experiences__main {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50rem;
-      grid-template-columns: 50rem;
-  -ms-grid-rows: minmax(5rem, 1fr);
-      grid-template-rows: minmax(5rem, 1fr);
-  grid-gap: 1.5rem;
-}
-
-.experiences__main .riwayat__group {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  grid-gap: 0.5rem;
-}
-
-.experiences__main .riwayat__group h1 {
-  color: #ffb640;
-}
-
-.experiences__main .riwayat__group h1::before {
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  background-color: #2b2a8b;
-  border-radius: 100%;
-  left: calc(5rem + 22.8px);
-  margin-top: 7px;
-  z-index: -1;
-}
-
-.experiences__main .riwayat__group h1::after {
-  position: absolute;
-  content: "";
-  height: 5px;
-  width: 30px;
-  background-color: #2b2a8b;
-  left: calc(5rem + 23px);
-  margin-top: 20px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  z-index: -1;
-}
-
-.experiences__main .riwayat__group p {
-  font-size: 0.9rem;
-}
-
-.experiences__main .riwayat::before {
-  position: absolute;
-  width: 8rem;
-  content: attr(rentang-waktu);
-  display: inline;
-  font-size: 0.5em;
-  font-weight: 600;
-  text-align: center;
-  left: 5rem;
-  margin-top: 3rem;
-}
-
-.mine {
-  position: relative;
-  height: calc(100vh - 10vh);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.mine::after {
-  position: absolute;
-  bottom: 8rem;
-  right: -5rem;
-  content: url("/img/daun.svg");
-  height: 15%;
-  width: 15%;
-  display: block;
-  z-index: -1;
-}
-
-.mine::before {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  position: absolute;
-  top: 7rem;
-  left: -5rem;
-  content: url("/img/daun3.svg");
-  height: 20%;
-  width: 20%;
-  display: block;
-  z-index: -1;
-}
-
-.mine__head {
-  color: #333;
-  text-transform: capitalize;
-}
-
-.mine__container {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.mine__social {
-  cursor: pointer;
-  background-color: red;
-  border-radius: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 20rem;
-  margin: 1em;
-  height: 15rem;
-  -webkit-box-shadow: 0 2.4px 2.5px rgba(0, 0, 0, 0.01), 0 6.5px 8.3px rgba(0, 0, 0, 0.011), 0 22px 37px rgba(0, 0, 0, 0.07);
-          box-shadow: 0 2.4px 2.5px rgba(0, 0, 0, 0.01), 0 6.5px 8.3px rgba(0, 0, 0, 0.011), 0 22px 37px rgba(0, 0, 0, 0.07);
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-
-.mine__social:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.mine__logo {
-  width: 3em;
-  height: 3em;
-}
-
-.mine__soc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #333;
-}
-
-.mine__soc p {
-  margin-top: 0.5rem;
-  text-transform: capitalize;
-}
-
-.mine__hilite {
-  margin: 0 1.5rem;
-  padding: 1rem;
-  background-color: white;
-  border-radius: 3px;
-}
-
-.mine__hilite img {
-  width: 100%;
-  height: 100%;
-}
-
-.mine .facebook {
-  background-color: rgba(98, 131, 197, 0.3);
-}
-
-.mine .twitter {
-  background-color: rgba(77, 181, 245, 0.3);
-}
-
-.mine .instagram {
-  background-color: rgba(234, 78, 120, 0.3);
-}
-
-.mine .linkedin {
-  background-color: rgba(0, 153, 232, 0.3);
-}
-
-.mine .github {
-  background-color: rgba(26, 26, 26, 0.3);
-}
-
-.contact-socmed {
-  position: relative;
-}
-
-.contact-socmed::before {
-  position: absolute;
-  content: attr(judul);
-  display: inline;
-  font-size: 25rem;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: -75px;
-  color: #f2f2f2;
-  z-index: -1;
-  top: 5rem;
 }
 /*# sourceMappingURL=style.css.map */

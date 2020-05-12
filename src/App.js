@@ -9,11 +9,10 @@ import Contact from "./components/Contact";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  const [loggedIn, setloggedIn] = useState(true);
   return (
     <Router>
       <div className="App">
-        <Navbar loggedIn={loggedIn} />
+        <Navbar />
         <Switch>
           <Route
             path="/"

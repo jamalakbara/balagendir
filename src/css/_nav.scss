@@ -9,7 +9,7 @@
   }
   &__link {
     @include set-flex(center, space-around);
-    width: 20rem;
+    width: 15rem;
     a {
       text-transform: capitalize;
       color: set-text-color(white);
