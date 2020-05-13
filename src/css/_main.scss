@@ -7,6 +7,10 @@
 main.content {
   @extend %main;
   grid-template-columns: 40% 60%;
+  background-image: url("../img/bg.svg");
+  background-size: contain;
+  background-position: center;
+  padding: 0 5rem;
   .img-home {
     width: 100%;
   }

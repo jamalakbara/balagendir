@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Helmet from "react-helmet";
 import Experiences from "./Experiences";
 import Services from "./Services";
+import Portofolio from "./Portofolio";
 
 function About(props) {
   const { title } = props;
@@ -54,12 +55,39 @@ function About(props) {
     },
   ]);
 
+  const [portofolio, setPortofolio] = useState([
+    {
+      id: 0,
+      name: "hc wiki",
+      img: "hcwiki.jpeg",
+    },
+    {
+      id: 1,
+      name: "terbang com",
+      img: "terbang.png",
+    },
+    {
+      id: 2,
+      name: "refresh",
+      img: "refresh.png",
+    },
+    {
+      id: 3,
+      name: "simarak",
+      img: "simarak.png",
+    },
+  ]);
+
   const pengalaman = exp.map((e) => (
     <Experiences key={e.id} expName={e.expName} terms={e.terms} desc={e.desc} />
   ));
 
   const serpis = services.map((s) => (
     <Services key={s.id} name={s.serviceName} gambar={s.img} desc={s.desc} />
+  ));
+
+  const porto = portofolio.map((p) => (
+    <Portofolio key={p.id} name={p.name} img={p.img} />
   ));
 
   return (
@@ -97,6 +125,12 @@ function About(props) {
             <h1>services offers</h1>
           </header>
           <main className="services__main">{serpis}</main>
+        </section>
+        <section className="portofolio" judul="portofolio">
+          <header className="portofolio__header">
+            <h1>portofolio</h1>
+          </header>
+          <main className="portofolio__main">{porto}</main>
         </section>
       </div>
     </div>

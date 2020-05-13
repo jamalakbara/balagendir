@@ -30,12 +30,16 @@
 }
 
 .experiences,
-.services {
+.services,
+.portofolio {
   position: relative;
   @include set-flex($align: center, $justify: center, $dir: column);
   margin-bottom: 5rem;
   &__header {
     @extend %header;
+  }
+  &__main {
+    display: grid;
   }
 }
 
@@ -50,7 +54,6 @@
     z-index: -1;
   }
   &__main {
-    display: grid;
     padding: 1rem 8rem;
     grid-template-rows: auto;
     grid-gap: 1.5rem;
@@ -91,7 +94,11 @@
 
 .services {
   &__main {
-    @include set-flex(center, center);
+    // @include set-flex(center, center);
+    // display: grid;
+    grid-gap: 1.5rem;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
   .offers {
     min-height: 20rem;
@@ -100,7 +107,7 @@
     background-color: $soft-biru;
     padding: 3rem;
     @include set-flex(center, flex-start, column);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
     h1 {
       margin: 1rem 0;
       text-transform: uppercase;
@@ -116,10 +123,54 @@
       width: 5rem;
     }
     &:hover {
-      transform: scale(1.1);
+      // transform: scale(1.1);
       box-shadow: 0 0.5px 1.9px rgba(0, 0, 0, 0.056),
         0 1.3px 5.4px rgba(0, 0, 0, 0.08), 0 3px 13px rgba(0, 0, 0, 0.104),
         0 10px 43px rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+
+.portofolio {
+  overflow: hidden;
+  width: 100%;
+  align-items: unset;
+  background-image: url("../img/bg.svg");
+  background-size: contain;
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 1.5rem;
+    place-content: center;
+    padding: 1rem;
+  }
+  &__header {
+    align-self: center;
+  }
+  &__item {
+    @include set-flex(center, center, column);
+    border: 2px solid set-text-color(white);
+    background-color: transparent;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    p {
+      text-align: center;
+      color: set-text-color(white);
+      font-size: 0.7rem;
+      font-weight: 500;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .img {
+      display: block;
+      height: calc(1080px * (1 / 8));
+      width: calc(1920px * (1 / 8));
+    }
+    &:hover {
+      transform: scale(1.1);
+      // box-shadow: 0 0.5px 1.9px rgba(0, 0, 0, 0.056),
+      //   0 1.3px 5.4px rgba(0, 0, 0, 0.08), 0 3px 13px rgba(0, 0, 0, 0.104),
+      //   0 10px 43px rgba(0, 0, 0, 0.16);
     }
   }
 }

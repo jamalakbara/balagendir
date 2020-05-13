@@ -153,7 +153,8 @@
 }
 
 .experiences__header,
-.services__header {
+.services__header,
+.portofolio__header {
   text-transform: capitalize;
   color: #333;
   font-size: 1.5rem;
@@ -161,7 +162,8 @@
 }
 
 .experiences,
-.services {
+.services,
+.portofolio {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,6 +181,13 @@
   margin-bottom: 5rem;
 }
 
+.experiences__main,
+.services__main,
+.portofolio__main {
+  display: -ms-grid;
+  display: grid;
+}
+
 .experiences::before {
   content: url("../img/berjas.svg");
   position: absolute;
@@ -190,8 +199,6 @@
 }
 
 .experiences__main {
-  display: -ms-grid;
-  display: grid;
   padding: 1rem 8rem;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
@@ -236,19 +243,10 @@
 }
 
 .services__main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  grid-gap: 1.5rem;
+  place-content: center;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 }
 
 .services .offers {
@@ -272,10 +270,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
-  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
 .services .offers h1 {
@@ -296,10 +294,77 @@
 }
 
 .services .offers:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
   -webkit-box-shadow: 0 0.5px 1.9px rgba(0, 0, 0, 0.056), 0 1.3px 5.4px rgba(0, 0, 0, 0.08), 0 3px 13px rgba(0, 0, 0, 0.104), 0 10px 43px rgba(0, 0, 0, 0.16);
           box-shadow: 0 0.5px 1.9px rgba(0, 0, 0, 0.056), 0 1.3px 5.4px rgba(0, 0, 0, 0.08), 0 3px 13px rgba(0, 0, 0, 0.104), 0 10px 43px rgba(0, 0, 0, 0.16);
+}
+
+.portofolio {
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  background-image: url("../img/bg.svg");
+  background-size: contain;
+}
+
+.portofolio__main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (300px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 1.5rem;
+  place-content: center;
+  padding: 1rem;
+}
+
+.portofolio__header {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.portofolio__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #333;
+  background-color: transparent;
+  padding: 1rem;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.portofolio__item p {
+  text-align: center;
+  color: #333;
+  font-size: 0.7rem;
+  font-weight: 500;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.portofolio__item .img {
+  display: block;
+  height: calc(1080px * (1 / 8));
+  width: calc(1920px * (1 / 8));
+}
+
+.portofolio__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .mine {
@@ -486,6 +551,10 @@ main.content, .login {
 main.content {
   -ms-grid-columns: 40% 60%;
       grid-template-columns: 40% 60%;
+  background-image: url("../img/bg.svg");
+  background-size: contain;
+  background-position: center;
+  padding: 0 5rem;
 }
 
 main.content .img-home {

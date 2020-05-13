@@ -5,7 +5,7 @@ import Helmet from "react-helmet";
 function Home(props) {
   const { gambar, title } = props;
   return (
-    <div className="container">
+    <div>
       <Helmet>
         <title>{title ? title : "Balagendir"}</title>
       </Helmet>
